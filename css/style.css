@@ -4,56 +4,75 @@
 }
 
 /* NAVBAR */
-nav{
+.header-wrapper{
     display: flex;
-    background-color: rgba(142, 142, 142, 0.353);
     justify-content: space-between;
-    height: 60px;
     align-items: center;
-    
+    border-bottom: 2px solid black;
+    padding:12px 24px;
+    background-color: #8b8878;
+
 }
 
-nav ul{
+.header-wrapper > .menu {
     display: flex;
-    list-style: none;
-    justify-content: space-between;
-    width: 30%;
-    padding-right: 30px;
     
 }
 
-
-li a {
+.header-wrapper a{
     text-decoration: none;
     color: black;
-    font-family:'Poppins', sans-serif;
-    font-size: 0.9em;
-    
 }
 
-.li-navbar:hover{
-background-color: #8b8878;
-transition: .5s ease-in-out;
-transition-delay: 0.3s;
-border-radius: 8px;
+
+.header-wrapper>.menu >button{
+    background-color: white;
+    padding: 14px 25px;
+    border: 1px solid grey;
+    cursor: pointer;
+    transition: 0.3s background-color ease-out;
+
 }
 
+.header-wrapper >.menu >button:hover{
+    background-color: gainsboro;
+}
+
+.header-wrapper >.menu >button:first-child{
+border-radius: 4px 0 0 4px;
+}
+
+.header-wrapper >.menu >button:last-child{
+    border-radius: 0 4px 4px 0;
+    }
+
+.header-wrapper >.logo{
+        width: auto;
+        height: 50px;
+        border-radius: 50%;
+        
+    }
 
 /* RESPONSIVE BREAKPOINT */
 
-/* UKURAN TABLET */
-@media screen and (max-width:1100px) {
-    nav ul{
-        width: 50%;
-    }
+/* UKURAN SMARTPHONE */
+@media screen and (max-width: 600px) {
+.header-wrapper{
+    flex-direction: column;
 }
 
-/* UKURAN SMARTPHONE */
-@media screen and (max-width:576px) {
-    nav ul{
-    font-size: xx-small;
-    }
+.menu{
+    flex-direction: column;
+    width: 100%;
 }
+
+.logo{
+    margin-bottom: 5px;
+}
+
+}
+    
+
 
 
 
