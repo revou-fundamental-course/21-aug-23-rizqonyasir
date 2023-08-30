@@ -3,9 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mini Project RevoU</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>hai masbro 3 </h1>
+    <nav >
+        <div class="logo-brand">
+            <a href="#"> <img src="logo.jpg" width="50" height="50"></a>
+        </div>
+        
+        <ul>
+            <li class="li-navbar"><a href="">Home</a></li>
+            <li class="li-navbar"><a href="profilePage.html">My profile</a></li>
+            <li class="li-navbar"><a href="">Achievment</a></li>
+            <li class="li-navbar"><a href="">Message US</a></li>
+        </ul>
+     </nav>
+
+
+<div class="Homepage">
+    <h1>Hi <span id="name"></span > ,Welcome to My Web!</h1>
+    <p></p>
+    <button id="tombol">Ganti Nama</button>
+</div>
+
+<div class="content-background">
+    <img src="contentBackground.jpg" >
+    <style>
+        img{
+            width: 100%;
+            padding-top: 5px;
+        }
+    </style>
+
+</div>
+
+<div class="achievment-container bg-dark">
+    <div class="achievment-content">
+        <h2>Fasilitas kami</h2>
+      <div class="achievment">
+        <div class="achievment-item">
+          <img src="Guru.jpg" alt="">
+          <p>GURU</p>
+        </div>
+        <div class="achievment-item">
+          <img src="lapangan.jpeg" alt="">
+          <p>LAPANGAN</p>
+        </div>
+        <div class="achievment-item">
+          <img src="ruangKelas.jpg" alt="">
+          <p>RUANG KELAS</p>
+        </div>
+        <div class="achievment-item">
+          <img src="https://assets.dataindonesia.id/1657159790627_89_Perpustakaan.jpg" alt="">
+          <p>PERPUSTAKAAN</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- INI FORM -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .container {
+    display: flex;
+  }
+
+  .form-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+
+  .result-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #e0e0e0;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h2>Form</h2>
+      <form id="myForm">
+        <label for="Nama">Nama:</label><br>
+        <input type="text" id="Nama" name="Nama"><br>
+
+        <label for="TanggalLahir">Tanggal Lahir:</label><br>
+        <input type="date" id="TanggalLahir" name="Tanggal Lahir"><br><br>
+       
+        <label for="JenisKelamin">Jenis Kelamin: </label><br>
+        <input type="radio" id="laki-laki" name="Jenis Kelamin" value="Laki-laki">
+        <label for="laki-laki">Laki-laki</label>
+        <input type="radio" id="perempuan" name="Jenis Kelamin" value="Perempuan">
+        <label for="perempuan">Perempuan</label><br>
+
+        <label for="name">Pesan:</label><br>
+        <textarea name="Pesan" rows="5" cols="40">
+        </textarea>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <div class="result-container">
+      <h2>Hasil</h2>
+      <div id="result"></div>
+    </div>
+  </div>
+  <script>
+    const form = document.getElementById("myForm");
+    const resultDiv = document.getElementById("result");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      let resultHTML = "<h3></h3>";
+      
+      for (const pair of formData.entries()) {
+        resultHTML += `<p><strong>${pair[0]}:</strong> ${pair[1]}</p>`;
+      }
+
+      resultDiv.innerHTML = resultHTML;
+    });
+  </script>
+
+
+
+ 
+    
+
+    <script src="script.js"></script>
 </body>
 </html>
